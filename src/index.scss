@@ -1,0 +1,20 @@
+// base
+@import 'styles/base/layout';
+@import 'styles/base/scroll';
+
+
+// helpers
+@import 'styles/helpers/vars';
+@import 'styles/helpers/reset';
+@import 'styles/helpers/vars';
+@import 'styles/helpers/mixins';
+
+// shared
+@import 'shared/ui/Sidebar/Sidebar.scss';
+@import 'shared/ui/Header/Header.scss';
+
+
+// pages
+@import 'pages/favourites/Favourites.scss';
+@import 'pages/trending/Trending.scss';
+
