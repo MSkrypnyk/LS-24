@@ -1,4 +1,17 @@
-.favourites-list {
-	display: grid;
-	grid-template-columns: 1fr 1fr 1fr;
+@import "/src/styles/helpers/_mixins.scss";
+.favourites {
+  padding: 0 32rem 30rem 32rem;
+ &-list {
+    margin-top: 24rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 25rem;
+    @include mobile {
+      grid-template-columns: 1fr ;
+    }
+  }
+  
+  
 }
+
+

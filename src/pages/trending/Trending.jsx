@@ -1,20 +1,44 @@
 import { Header } from "../../shared/ui/Header/Header";
 import { Film } from "../../shared/ui/Film/Film";
 import { films } from "../../database/films";
+import { useState } from "react";
+import { MainTrend } from "../../shared/ui/MainTrend/MainTrend";
 
 export const Trending = () => {
-	const listItems = films.map((film) => <Film key={film.id} film={film} />);
+  const [selectedFilmId, setSelectedFilmId] = useState(null);
 
-	return (
-		<>
-			<Header />
-			<div className="trending">
-				<div className="title">Trending</div>
-				<div className="trending-list">
-					{listItems}
-				</div>
-			</div>
-			<div className="main-trend">sjdhfgjksdhf</div>
-		</>
-	);
+  const handleFilmSelect = (filmId) => {
+    if (selectedFilmId === filmId) {
+      setSelectedFilmId(null);
+    } else {
+      setSelectedFilmId(filmId);
+    }
+  };
+
+  return (
+    <>
+      <Header />
+      <div className="trending">
+        <div className="title">Trending at this moment</div>
+        <div className="trending-list">
+          {films.map((film) => (
+            <div
+              key={film.id}
+              className={`trending-item ${
+                selectedFilmId === film.id ? "active" : "inactive"
+              }`}
+              onClick={() => handleFilmSelect(film.id)}
+            >
+              <Film film={film} handleToggleFavorite={() => {}} />
+            </div>
+          ))}
+        </div>
+        {selectedFilmId && (
+          <div className="main-trend">
+            <MainTrend filmId={selectedFilmId} />
+          </div>
+        )}
+      </div>
+    </>
+  );
 };

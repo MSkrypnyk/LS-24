@@ -1,18 +1,35 @@
 export const films = [
 	{
 		id: 1,
-		title: "Bullet science",
-		image: 'https://images.indianexpress.com/2022/08/bullet-train-review.jpg',
+		title: "Tokyo Train",
+		image: '/src/assets/img/film/film3.png',
 		year: "2022",
 		genre: "Action comedy",
 		isFavorited: true,
 	},
 	{
 		id: 2,
-		title: "House of Gucci",
-		image: 'https://m.media-amazon.com/images/M/MV5BMzNhZDkzMzYtNmY2Ny00YWY5LTg4YjAtNTFlMzA2ODQxMTcxXkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_.jpg',
+		title: "Moonfall Again",
+		image: '/src/assets/img/film/film4.png',
 		year: "2022",
-		genre: "Drama",
+		genre: "Comedy drama",
 		isFavorited: true,
 	},
+	{
+		id: 3,
+		title: "Bullet science",
+		image: '/src/assets/img/film/film1.png',
+		year: "2022",
+		genre: "Action comedy",
+		isFavorited: false ,
+	},
+	{
+		id: 4,
+		title: "House of Gucci",
+		image: '/src/assets/img/film/film2.png',
+		year: "2022",
+		genre: "Drama",
+		isFavorited: false,
+	},
+	
 ];

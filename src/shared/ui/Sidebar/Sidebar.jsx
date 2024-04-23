@@ -1,4 +1,5 @@
 import { NavLink } from "react-router-dom";
+import { useState } from "react";
 import { LogoIcon } from "../../icons/Logo/LogoIcon";
 import { FilmIcon } from "../../icons/Sidebar/FilmIcon";
 import { HeartIcon } from "../../icons/Sidebar/HeartIcon";
@@ -9,81 +10,78 @@ import { SlidersIcon } from "../../icons/Sidebar/SlidersIcon";
 import { MessageCircleIcon } from "../../icons/Sidebar/MessageCircleIcon";
 
 export const Sidebar = () => {
+  const [show, setShow] = useState(false);
+
+  const toggleSidebar = () => {
+    setShow(!show);
+  };
+
   return (
-    <div className="sidebar">
-      <LogoIcon className="icon" />
+    <div className={`sidebar ${show ? "sidebar-mobile" : ""}`}>
+      <LogoIcon className="icon logo" />
+      <div className="sidebar-open" onClick={toggleSidebar}>
+        <span className="material-icons">{show ? "close" : "menu"}</span>
+      </div>
       <div className="sidebar-pages">
         <NavLink
           to="/home"
-          className={({ isActive }) =>
-            isActive ? "sidebar-link is-active" : "sidebar-link"
-          }
+          className="sidebar-link"
+          activeClassName="is-active"
         >
-          <FilmIcon />
-          Home
+          <FilmIcon className="sidebar-icon" />
+          {!show && <span>Home</span>}
         </NavLink>
-        <NavLink
-          to="/"
-          className={({ isActive }) =>
-            isActive ? "sidebar-link is-active" : "sidebar-link"
-          }
-        >
-          <HeartIcon />
-          Favourites
+        <NavLink to="/" className="sidebar-link" activeClassName="is-active">
+          <HeartIcon className="sidebar-icon" />
+          {!show && <span>Favourites</span>}
         </NavLink>
         <NavLink
           to="/trending"
-          className={({ isActive }) =>
-            isActive ? "sidebar-link is-active" : "sidebar-link"
-          }
+          className="sidebar-link"
+          activeClassName="is-active"
         >
-          <TrendingUpIcon />
-          Trending
+          <TrendingUpIcon className="sidebar-icon" />
+          {!show && <span>Trending</span>}
         </NavLink>
         <NavLink
           to="/comingsoon"
-          className={({ isActive }) =>
-            isActive ? "sidebar-link  is-active" : "sidebar-link "
-          }
+          className="sidebar-link mb-small"
+          activeClassName="is-active mb-small"
         >
-          <CelendarIcon />
-          Coming soon
+          <CelendarIcon className="sidebar-icon" />
+          {!show && <span>Coming soon</span>}
         </NavLink>
         <NavLink
           to="/community"
-          className={({ isActive }) =>
-            isActive ? "sidebar-link is-active" : "sidebar-link"
-          }
+          className="sidebar-link"
+          activeClassName="is-active"
         >
-          <UsersIcon />
-          Community
+          <UsersIcon className="sidebar-icon" />
+          {!show && <span>Community</span>}
         </NavLink>
         <NavLink
           to="/social"
-          className={({ isActive }) =>
-            isActive ? "sidebar-link is-active" : "sidebar-link"
-          }
+          className="sidebar-link mb"
+          activeClassName="is-active mb"
         >
-          <MessageCircleIcon />
-          Social
+          <MessageCircleIcon className="sidebar-icon" />
+          {!show && <span>Social</span>}
         </NavLink>
         <NavLink
           to="/setting"
-          className={({ isActive }) =>
-            isActive ? "sidebar-link is-active" : "sidebar-link"
-          }
+          className="sidebar-link"
+          activeClassName="is-active"
         >
-          <SlidersIcon />
-          Settings
+          <SlidersIcon className="sidebar-icon" />
+          {!show && <span>Settings</span>}
         </NavLink>
         <NavLink
           to="/logout"
-          className={({ isActive }) =>
-            isActive ? "sidebar-link is-active" : "sidebar-link"
-          }
+          className="sidebar-link"
+          activeClassName="is-active"
         >
-          <CelendarIcon />
-          Logout
+          <CelendarIcon className="sidebar-icon" />
+          {!show && <span>Logout</span>}
         </NavLink>
       </div>
     </div>

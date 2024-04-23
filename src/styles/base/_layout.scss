@@ -1,5 +1,10 @@
+@import "/src/styles/helpers/_mixins.scss";
 html {
   font-size: 1px;
+ 
+  @include mobile {
+    font-size: 0.8px;
+  }
 }
 
 html,
@@ -27,4 +32,14 @@ body {
 
 .icon {
   cursor: pointer;
+}
+
+.title {
+  
+font-weight: 600;
+font-size: 20rem;
+@include mobile {
+  text-align: center;
+}
+
 }
