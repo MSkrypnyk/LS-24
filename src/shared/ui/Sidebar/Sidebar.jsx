@@ -1,4 +1,4 @@
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { useState } from "react";
 import { LogoIcon } from "../../icons/Logo/LogoIcon";
 import { FilmIcon } from "../../icons/Sidebar/FilmIcon";
@@ -18,27 +18,31 @@ export const Sidebar = () => {
 
   return (
     <div className={`sidebar ${show ? "sidebar-mobile" : ""}`}>
-      <LogoIcon className="icon logo" />
+      <Link to="/">
+        {" "}
+        <LogoIcon className="icon logo" />
+      </Link>
+
       <div className="sidebar-open" onClick={toggleSidebar}>
         <span className="material-icons">{show ? "close" : "menu"}</span>
       </div>
       <div className="sidebar-pages">
         <NavLink
-          to="/home"
+          to="/"
           className="sidebar-link"
-          activeClassName="is-active"
+          activeclassname="is-active"
         >
           <FilmIcon className="sidebar-icon" />
           {!show && <span>Home</span>}
         </NavLink>
-        <NavLink to="/" className="sidebar-link" activeClassName="is-active">
+        <NavLink to="/favourites" className="sidebar-link" activeclassname="is-active">
           <HeartIcon className="sidebar-icon" />
           {!show && <span>Favourites</span>}
         </NavLink>
         <NavLink
           to="/trending"
           className="sidebar-link"
-          activeClassName="is-active"
+          activeclassname="is-active"
         >
           <TrendingUpIcon className="sidebar-icon" />
           {!show && <span>Trending</span>}
@@ -46,7 +50,7 @@ export const Sidebar = () => {
         <NavLink
           to="/comingsoon"
           className="sidebar-link mb-small"
-          activeClassName="is-active mb-small"
+          activeclassname="is-active mb-small"
         >
           <CelendarIcon className="sidebar-icon" />
           {!show && <span>Coming soon</span>}
@@ -54,7 +58,7 @@ export const Sidebar = () => {
         <NavLink
           to="/community"
           className="sidebar-link"
-          activeClassName="is-active"
+          activeclassname="is-active"
         >
           <UsersIcon className="sidebar-icon" />
           {!show && <span>Community</span>}
@@ -62,7 +66,7 @@ export const Sidebar = () => {
         <NavLink
           to="/social"
           className="sidebar-link mb"
-          activeClassName="is-active mb"
+          activeclassname="is-active mb"
         >
           <MessageCircleIcon className="sidebar-icon" />
           {!show && <span>Social</span>}
@@ -70,7 +74,7 @@ export const Sidebar = () => {
         <NavLink
           to="/setting"
           className="sidebar-link"
-          activeClassName="is-active"
+          activeclassname="is-active"
         >
           <SlidersIcon className="sidebar-icon" />
           {!show && <span>Settings</span>}
@@ -78,7 +82,7 @@ export const Sidebar = () => {
         <NavLink
           to="/logout"
           className="sidebar-link"
-          activeClassName="is-active"
+          activeclassname="is-active"
         >
           <CelendarIcon className="sidebar-icon" />
           {!show && <span>Logout</span>}

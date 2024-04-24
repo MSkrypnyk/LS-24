@@ -1,0 +1,32 @@
+.home {
+  background-image: url(/src/assets/img/home/bg.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
+  &-content {
+    padding: 152rem 32rem 53rem 32rem;
+  }
+  &-title {
+    font-weight: 600;
+    font-size: 48rem;
+    line-height: 100%;
+    margin-bottom: 20rem;
+  }
+  &-info {
+    font-weight: 400;
+    font-size: 14rem;
+    line-height: 143%;
+    margin-bottom: 36rem;
+  }
+  &__main {
+    padding: 6rem 32rem;
+  }
+}
+
+.main-title {
+  margin-bottom: 16rem;
+  &:nth-child(3) {
+    margin-top: 40rem;
+  }
+}

@@ -2,31 +2,29 @@
 .trending {
   padding: 0 32rem 30rem 32rem;
   &-list {
-	display: grid;
-	grid-template-columns: 1fr 1fr 1fr 1fr;
-	margin-top: 16rem;
-	gap: 24rem;
-	@include mobile {
-		grid-template-columns: 1fr ;
-		justify-content: center;
-		align-items: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    margin-top: 16rem;
+    gap: 24rem;
+    @include mobile {
+		grid-template-columns: 1fr;
+		place-items: center;
 	  }
   }
-  
 
   &-item {
-	transition: opacity 0.3s ease;
-	cursor: pointer;
+    transition: opacity 0.3s ease;
+    cursor: pointer;
+	max-width: 234rem;
+	width: 100%;
+
   }
-  
+
   .active {
-	opacity: 1;
-   
+    opacity: 1;
   }
-  
+
   .inactive {
-	opacity: 0.3;
+    opacity: 0.3;
   }
 }
-
-

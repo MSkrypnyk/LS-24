@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { Header } from "../../shared/ui/Header/Header";
 import { Film } from "../../shared/ui/Film/Film";
 import { films } from "../../database/films";
-import { Footer } from "../../shared/ui/Footer/Footer";
 
 export const Favourites = () => {
   const [filmsData, setFilmsData] = useState(films);
@@ -13,9 +12,11 @@ export const Favourites = () => {
     );
     setFilmsData(updatedFilms);
   };
-  const filteredFilms = filmsData.filter(film => film.id === 3 || film.id === 4).slice(0, 2);
+  const filteredFilms = filmsData
+    .filter((film) => film.id === 3 || film.id === 4)
+    .slice(0, 2);
 
-  const listItems = filteredFilms.map((film)  => (
+  const listItems = filteredFilms.map((film) => (
     <Film
       key={film.id}
       film={film}
@@ -30,7 +31,6 @@ export const Favourites = () => {
         <div className="title">Favourites</div>
         <div className="favourites-list">{listItems}</div>
       </div>
-
     </>
   );
 };

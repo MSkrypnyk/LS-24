@@ -1,8 +1,8 @@
 import {
-	createBrowserRouter,
-	createRoutesFromElements,
-	Route,
-	RouterProvider,
+  createBrowserRouter,
+  createRoutesFromElements,
+  Route,
+  RouterProvider,
 } from "react-router-dom";
 import { Favourites } from "../../pages/favourites/Favourites";
 import { Login } from "../../pages/auth/login/Login";
@@ -15,22 +15,21 @@ import { Home } from "../../pages/home/Home";
 import { NotFound } from "../../shared/ui/NotFound/NotFound";
 
 export const AppRouter = () => {
-	const [loggedIn] = useState(true);
-	const router = createBrowserRouter(
-		createRoutesFromElements(
-			<Route path="/" element={<App loggedIn={loggedIn} />}>
-				<Route element={<GuestRoutes loggedIn={loggedIn} />}>
-					<Route path="/login" element={<Login />} />
-				</Route>
-				<Route element={<PrivateRoutes loggedIn={loggedIn} />}>
-					<Route index={true} path="/" element={<Favourites />} />
-					<Route index={true} path="/trending" element={<Trending />} />
-					<Route index={true} path="/home" element={<Home />} />
-					<Route index={true} path="*" element={<NotFound />} />
-			
-				</Route>
-			</Route>
-		)
-	);
-	return <RouterProvider router={router} />;
+  const [loggedIn] = useState(true);
+  const router = createBrowserRouter(
+    createRoutesFromElements(
+      <Route path="/" element={<App loggedIn={loggedIn} />}>
+        <Route element={<GuestRoutes loggedIn={loggedIn} />}>
+          <Route path="/login" element={<Login />} />
+        </Route>
+        <Route element={<PrivateRoutes loggedIn={loggedIn} />}>
+          <Route index={true} path="/favourites" element={<Favourites />} />
+          <Route index={true} path="/trending" element={<Trending />} />
+          <Route index={true} path="/" element={<Home />} />
+          <Route index={true} path="*" element={<NotFound />} />
+        </Route>
+      </Route>
+    )
+  );
+  return <RouterProvider router={router} />;
 };

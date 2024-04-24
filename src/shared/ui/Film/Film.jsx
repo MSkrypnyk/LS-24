@@ -1,11 +1,10 @@
+import React from "react";
 import PropTypes from "prop-types";
-import { FavouriteIcon } from "../../icons/Favourites/FavouriteIcon";
-import { HeartIcon } from "../../icons/Sidebar/HeartIcon";
-
+import { FavoriteButton } from "../FavoriteButton/FavoriteButton";
 
 export const Film = ({ film, handleToggleFavorite }) => {
   const handleFavoriteToggle = () => {
-    handleToggleFavorite(film.id); 
+    handleToggleFavorite(film.id);
   };
 
   return (
@@ -15,13 +14,10 @@ export const Film = ({ film, handleToggleFavorite }) => {
       <div className="film-details">
         {film.year} | {film.genre}
       </div>
-      <button className="btn" onClick={handleFavoriteToggle}>
-        {film.isFavorited ? (
-          <HeartIcon className="film-icon" />
-        ) : (
-          <FavouriteIcon className="film-icon" />
-        )}
-      </button>
+      <FavoriteButton
+        isFavorited={film.isFavorited}
+        handleToggleFavorite={handleFavoriteToggle}
+      />
     </div>
   );
 };
@@ -37,23 +33,3 @@ Film.propTypes = {
   }).isRequired,
   handleToggleFavorite: PropTypes.func.isRequired,
 };
-
-
-
-{
-  /* <div className="film-item">
-      <img className="film-image" src={film.image} alt={film.title} />
-      <div className="film-title">{film.title}</div>
-      <div className="film-details">
-        {film.year} | {film.genre}
-      </div>
-      <button className="btn" onClick={handleToggleFavorite}>
-        {isFavorited ? (
-          <HeartIcon className="favorite-icon" />
-        ) : (
-          <FavouriteIcon className="favorite-icon" />
-        )}
-      </button>
-    </div>
-  ); */
-}

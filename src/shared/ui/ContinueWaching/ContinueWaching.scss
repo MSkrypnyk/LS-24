@@ -1,0 +1,17 @@
+@import "/src/styles/helpers/_mixins.scss";
+.continue-watching {
+  margin-top: 24rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 24rem;
+  position: relative;
+  @include mobile {
+    grid-template-columns: 1fr;
+  }
+  &-img {
+    max-height: 209rem;
+    width: 100%;
+    border: 1px solid var(--gray);
+    border-radius: 20rem;
+  }
+}

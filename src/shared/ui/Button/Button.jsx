@@ -1,4 +1,3 @@
-
 export const Button = ({
   link,
   className,
@@ -10,7 +9,7 @@ export const Button = ({
   const renderClass = () => {
     switch (variant) {
       case "primary":
-        return `btn trend-btn ${className || ""}`;
+        return `btn watch-btn ${className || ""}`;
         break;
     }
   };

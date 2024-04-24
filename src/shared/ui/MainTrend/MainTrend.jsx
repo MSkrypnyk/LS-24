@@ -4,18 +4,10 @@ import { Button } from "../Button/Button";
 import { HeartIcon } from "../../icons/Sidebar/HeartIcon";
 import { FavouriteIcon } from "../../icons/Favourites/FavouriteIcon";
 import { StarIcon } from "../../icons/Trending/StarIcon";
+import { Watch } from "../Watch/Watch";
 
 export const MainTrend = ({ filmId }) => {
   const trendItem = mainTrend.find((item) => item.id === parseInt(filmId, 10));
-  const [isFavorited, setIsFavorited] = useState(false);
-
-  if (!trendItem) {
-    return <div>Not found</div>;
-  }
-
-  const handleFavoriteToggle = () => {
-    setIsFavorited(!isFavorited);
-  };
 
   return (
     <div className="trend">
@@ -31,17 +23,11 @@ export const MainTrend = ({ filmId }) => {
           <p>{trendItem.time}</p>
         </div>
         <p className="trend-description">{trendItem.description}</p>
-        <div className="trend-watch">
-          <Button type="button" variant="primary">
-            Watch now
-          </Button>
-          <button className="btn trend-icon" onClick={handleFavoriteToggle}>
-            {isFavorited ? <HeartIcon /> : <FavouriteIcon />}
-          </button>
-        </div>
+        <Watch />
         <div className="trend-rating">
-         <StarIcon/>
-          {trendItem.rating}</div>
+          <StarIcon />
+          {trendItem.rating}
+        </div>
       </div>
     </div>
   );

@@ -1,0 +1,31 @@
+.watch {
+  display: flex;
+  align-items: center;
+  gap: 16rem;
+
+  &-btn {
+    font-weight: 500;
+    font-size: 16rem;
+    line-height: 125%;
+    color: var(--white);
+    padding: 17rem 24rem;
+    background: var(--purple);
+    border-radius: 14rem;
+  }
+
+  &-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 54rem;
+    height: 54rem;
+    border-radius: 14rem;
+    padding: 15rem;
+    background: linear-gradient(
+      98.85deg,
+      #ffffff 3.36%,
+      rgba(255, 255, 255, 0) 238.16%
+    );
+    backdrop-filter: blur(5.92593px);
+  }
+}

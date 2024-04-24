@@ -1,7 +1,7 @@
 @import "/src/styles/helpers/_mixins.scss";
 html {
   font-size: 1px;
- 
+
   @include mobile {
     font-size: 0.8px;
   }
@@ -35,11 +35,9 @@ body {
 }
 
 .title {
-  
-font-weight: 600;
-font-size: 20rem;
-@include mobile {
-  text-align: center;
-}
-
+  font-weight: 600;
+  font-size: 20rem;
+  @include mobile {
+    text-align: center;
+  }
 }
