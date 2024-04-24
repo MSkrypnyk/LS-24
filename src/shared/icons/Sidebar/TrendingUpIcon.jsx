@@ -1,6 +1,7 @@
-export const TrendingUpIcon = () => {
+export const TrendingUpIcon = ({className}) => {
   return (
     <svg
+    className={className}
       width="24"
       height="24"
       viewBox="0 0 24 24"
@@ -9,14 +10,14 @@ export const TrendingUpIcon = () => {
     >
       <path
         d="M23 6L13.5 15.5L8.5 10.5L1 18"
-        stroke="white"
+        stroke="currentColor"
         strokeWidth="2"
         strokeLinecap="round"
         strokeLinejoin="round"
       />
       <path
         d="M17 6H23V12"
-        stroke="white"
+        stroke="currentColor"
         strokeWidth="2"
         strokeLinecap="round"
         strokeLinejoin="round"

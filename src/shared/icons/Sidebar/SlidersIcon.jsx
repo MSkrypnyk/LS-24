@@ -1,6 +1,7 @@
-export const SlidersIcon = () => {
+export const SlidersIcon = ({className}) => {
   return (
     <svg
+    className={className}
       width="24"
       height="24"
       viewBox="0 0 24 24"
@@ -9,63 +10,63 @@ export const SlidersIcon = () => {
     >
       <path
         d="M4 21V14"
-        stroke="white"
+        stroke="currentColor"
         strokeWidth="2"
         strokeLinecap="round"
         strokeLinejoin="round"
       />
       <path
         d="M4 10V3"
-        stroke="white"
+        stroke="currentColor"
         strokeWidth="2"
         strokeLinecap="round"
         strokeLinejoin="round"
       />
       <path
         d="M12 21V12"
-        stroke="white"
+        stroke="currentColor"
         strokeWidth="2"
         strokeLinecap="round"
         strokeLinejoin="round"
       />
       <path
         d="M12 8V3"
-        stroke="white"
+        stroke="currentColor"
         strokeWidth="2"
         strokeLinecap="round"
         strokeLinejoin="round"
       />
       <path
         d="M20 21V16"
-        stroke="white"
+        stroke="currentColor"
         strokeWidth="2"
         strokeLinecap="round"
         strokeLinejoin="round"
       />
       <path
         d="M20 12V3"
-        stroke="white"
+        stroke="currentColor"
         strokeWidth="2"
         strokeLinecap="round"
         strokeLinejoin="round"
       />
       <path
         d="M1 14H7"
-        stroke="white"
+        stroke="currentColor"
         strokeWidth="2"
         strokeLinecap="round"
         strokeLinejoin="round"
       />
       <path
         d="M9 8H15"
-        stroke="white"
+        stroke="currentColor"
         strokeWidth="2"
         strokeLinecap="round"
         strokeLinejoin="round"
       />
       <path
         d="M17 16H23"
-        stroke="white"
+        stroke="currentColor"
         strokeWidth="2"
         strokeLinecap="round"
         strokeLinejoin="round"

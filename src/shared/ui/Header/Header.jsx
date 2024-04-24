@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { BellIcon } from "../../icons/Header/BellIcon";
 import { SearchIcon } from "../../icons/Header/SearchIcon";
+import { LogoIcon } from "../../icons/Logo/LogoIcon";
 
 export const Header = () => {
   return (
@@ -23,6 +24,10 @@ export const Header = () => {
           <p className="user-name">Tetiana</p>
         </div>
       </div>
+      <Link to="/">
+        {" "}
+        <LogoIcon className="header-logo" />
+      </Link>
     </div>
   );
 };

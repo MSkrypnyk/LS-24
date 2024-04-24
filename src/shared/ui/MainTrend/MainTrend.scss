@@ -12,22 +12,25 @@
   &-img {
     border: 1px solid var(--gray);
     border-radius: 20rem;
-    min-width: 534rem;
+    max-width: 465rem;
+    width: 100%;
     min-height: 431rem;
     background-size: 100%;
     background-position: 50% 50%;
     background-repeat: no-repeat;
     @include mobile {
-     
-      min-width: 235rem;
-      width: 100%;
-      min-height: 215rem;
+      min-height: 240rem;
     }
   }
   &-info {
     display: flex;
     flex-direction: column;
-    position: relative;
+  }
+
+  &-group {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
   }
 
   &-title {
@@ -36,19 +39,29 @@
     line-height: 125%;
     margin-bottom: 12rem;
     @include mobile {
-      font-size: 20rem;
+      font-size: 25rem;
     }
   }
+  &-rating {
+    display: flex;
+    align-items: center;
+    gap: 8rem;
+    font-weight: 500;
+    font-size: 18rem;
+    line-height: 133%;
+  }
 
-  &-group {
+  &-data {
     display: flex;
     align-items: center;
     gap: 36rem;
-
     font-weight: 500;
     font-size: 18rem;
     line-height: 133%;
     margin-bottom: 21rem;
+    @include mobile {
+      gap: 15rem;
+    }
   }
 
   &-description {
@@ -57,20 +70,5 @@
     line-height: 150%;
     max-width: 533rem;
     margin-bottom: 26rem;
-  }
-
-  &-rating {
-    display: flex;
-    align-items: center;
-    gap: 8rem;
-    font-weight: 500;
-    font-size: 18rem;
-    line-height: 133%;
-    position: absolute;
-    right: 20rem;
-
-    @include mobile {
-      right: 10rem;
-    }
   }
 }

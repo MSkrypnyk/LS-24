@@ -21,11 +21,10 @@
     height: 54rem;
     border-radius: 14rem;
     padding: 15rem;
-    background: linear-gradient(
-      98.85deg,
-      #ffffff 3.36%,
-      rgba(255, 255, 255, 0) 238.16%
-    );
+    background: var(--bg-icon);
     backdrop-filter: blur(5.92593px);
+  }
+  &-icon path  {
+    stroke: var(--purple);
   }
 }

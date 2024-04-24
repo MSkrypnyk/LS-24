@@ -16,18 +16,20 @@ export const MainTrend = ({ filmId }) => {
         style={{ backgroundImage: `url(${trendItem.bgImage})` }}
       ></div>
       <div className="trend-info">
-        <h2 className="trend-title">{trendItem.title}</h2>
         <div className="trend-group">
+          <h2 className="trend-title">{trendItem.title}</h2>
+          <div className="trend-rating">
+            <StarIcon />
+            {trendItem.rating}
+          </div>
+        </div>
+        <div className="trend-data">
           <p> {trendItem.year}</p>
           <p>{trendItem.genre}</p>
           <p>{trendItem.time}</p>
         </div>
         <p className="trend-description">{trendItem.description}</p>
         <Watch />
-        <div className="trend-rating">
-          <StarIcon />
-          {trendItem.rating}
-        </div>
       </div>
     </div>
   );

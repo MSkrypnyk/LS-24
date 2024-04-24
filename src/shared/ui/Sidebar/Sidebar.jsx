@@ -27,15 +27,15 @@ export const Sidebar = () => {
         <span className="material-icons">{show ? "close" : "menu"}</span>
       </div>
       <div className="sidebar-pages">
-        <NavLink
-          to="/"
-          className="sidebar-link"
-          activeclassname="is-active"
-        >
+        <NavLink to="/" className="sidebar-link" activeclassname="is-active">
           <FilmIcon className="sidebar-icon" />
           {!show && <span>Home</span>}
         </NavLink>
-        <NavLink to="/favourites" className="sidebar-link" activeclassname="is-active">
+        <NavLink
+          to="/favourites"
+          className="sidebar-link"
+          activeclassname="is-active"
+        >
           <HeartIcon className="sidebar-icon" />
           {!show && <span>Favourites</span>}
         </NavLink>

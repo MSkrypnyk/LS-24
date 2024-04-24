@@ -13,7 +13,7 @@
   }
 
   &-item {
-    transition: opacity 0.3s ease;
+    transition: .2s all ease-in-out;
     cursor: pointer;
 	max-width: 234rem;
 	width: 100%;
@@ -22,6 +22,7 @@
 
   .active {
     opacity: 1;
+    transform: scale(1.05);
   }
 
   .inactive {
