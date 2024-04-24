@@ -9,9 +9,14 @@
     grid-template-columns: 1fr;
   }
   &-img {
-    max-height: 209rem;
+    max-height: 208rem;
+    height: 100%;
     width: 100%;
     border: 1px solid var(--gray);
     border-radius: 20rem;
+    @include mobile {
+      max-height: 145rem;
+      height: 100%;
+    }
   }
 }

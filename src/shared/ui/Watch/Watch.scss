@@ -1,3 +1,4 @@
+@import "/src/styles/helpers/_mixins.scss";
 .watch {
   display: flex;
   align-items: center;
@@ -11,6 +12,10 @@
     padding: 17rem 24rem;
     background: var(--purple);
     border-radius: 14rem;
+    @include mobile {
+      padding: 10rem 17rem;
+      border-radius: 9rem;
+    }
   }
 
   &-icon {
@@ -23,8 +28,14 @@
     padding: 15rem;
     background: var(--bg-icon);
     backdrop-filter: blur(5.92593px);
+    @include mobile {
+      width: 40rem;
+      height: 40rem;
+      padding: 8rem;
+      border-radius: 9rem;
+    }
   }
-  &-icon path  {
+  &-icon path {
     stroke: var(--purple);
   }
 }
