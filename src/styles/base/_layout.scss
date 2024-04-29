@@ -22,8 +22,9 @@ body {
 
 .container {
   display: grid;
-  grid-template-columns: auto 1fr;
+  grid-template-columns: 1fr;
   height: 100%;
+  width: 100%;
 }
 
 .ml-auto {
@@ -39,5 +40,13 @@ body {
   font-size: 20rem;
   @include mobile {
     text-align: center;
+  }
+}
+
+.page {
+  padding-left: 274rem;
+  @include mobile {
+    padding-left: 0;
+    padding-top: 55rem;
   }
 }

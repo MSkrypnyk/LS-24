@@ -14,9 +14,11 @@
     width: 100%;
     border: 1px solid var(--gray);
     border-radius: 20rem;
+    cursor: pointer;
     @include mobile {
       max-height: 145rem;
       height: 100%;
+
     }
   }
 }

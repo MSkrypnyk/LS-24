@@ -6,6 +6,7 @@
     grid-template-columns: 1fr 1fr 1fr 1fr;
     margin-top: 16rem;
     gap: 24rem;
+    
     @include mobile {
 		grid-template-columns: 1fr;
 		place-items: center;
@@ -15,9 +16,7 @@
   &-item {
     transition: .2s all ease-in-out;
     cursor: pointer;
-	max-width: 234rem;
-	width: 100%;
-
+    width: 100%;
   }
 
   .active {

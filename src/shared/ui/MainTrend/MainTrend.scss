@@ -3,6 +3,7 @@
   padding-top: 56rem;
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 24rem;
 
   @include mobile {
@@ -12,7 +13,7 @@
   &-img {
     border: 1px solid var(--gray);
     border-radius: 20rem;
-    max-width: 465rem;
+    max-width: 534rem;
     width: 100%;
     min-height: 431rem;
     background-size: 100%;

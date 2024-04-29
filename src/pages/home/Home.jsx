@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { Header } from "../../shared/ui/Header/Header";
 import { Watch } from "../../shared/ui/Watch/Watch";
 import { Film } from "../../shared/ui/Film/Film";

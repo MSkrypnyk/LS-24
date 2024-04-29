@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { Button } from "../Button/Button";
 import { HeartIcon } from "../../icons/Sidebar/HeartIcon";
 import { FavouriteIcon } from "../../icons/Favourites/FavouriteIcon";

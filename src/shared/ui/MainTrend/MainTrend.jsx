@@ -1,8 +1,5 @@
 import React, { useState } from "react";
 import { mainTrend } from "/src/database/mainTrend.js";
-import { Button } from "../Button/Button";
-import { HeartIcon } from "../../icons/Sidebar/HeartIcon";
-import { FavouriteIcon } from "../../icons/Favourites/FavouriteIcon";
 import { StarIcon } from "../../icons/Trending/StarIcon";
 import { Watch } from "../Watch/Watch";
 

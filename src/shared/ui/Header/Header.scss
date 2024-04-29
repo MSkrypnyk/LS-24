@@ -2,6 +2,7 @@
 .header {
   display: flex;
   align-items: center;
+  justify-content: space-between;
   padding: 40rem 42rem 65rem 32rem;
   gap: 32rem;
   @include mobile {

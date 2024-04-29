@@ -1,11 +1,15 @@
+import { useState, useEffect } from "react";
 import { Header } from "../../shared/ui/Header/Header";
 import { Film } from "../../shared/ui/Film/Film";
 import { films } from "../../database/films";
-import { useState } from "react";
 import { MainTrend } from "../../shared/ui/MainTrend/MainTrend";
 
 export const Trending = () => {
   const [selectedFilmId, setSelectedFilmId] = useState(null);
+
+  useEffect(() => {
+    setSelectedFilmId(1);
+  }, []);
 
   const handleFilmSelect = (filmId) => {
     if (selectedFilmId === filmId) {
@@ -16,7 +20,7 @@ export const Trending = () => {
   };
 
   return (
-    <>
+    <div>
       <Header />
       <div className="trending">
         <div className="title">Trending at this moment</div>
@@ -39,6 +43,6 @@ export const Trending = () => {
           </div>
         )}
       </div>
-    </>
+    </div>
   );
 };

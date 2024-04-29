@@ -10,7 +10,7 @@ export const Button = ({
     switch (variant) {
       case "primary":
         return `btn watch-btn ${className || ""}`;
-        break;
+
     }
   };
 

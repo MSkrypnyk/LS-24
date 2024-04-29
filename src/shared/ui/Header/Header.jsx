@@ -1,4 +1,3 @@
-import React from "react";
 import { Link } from "react-router-dom";
 import { BellIcon } from "../../icons/Header/BellIcon";
 import { SearchIcon } from "../../icons/Header/SearchIcon";
